@@ -6,28 +6,50 @@
     <title>Your Site Title</title>
     <style>
         body {
-            background-color: #f0f0f0; /* Light grey background */
-            font-family: Arial, sans-serif;
+            display: flex; /* Use flexbox to split the screen */
             margin: 0;
             padding: 0;
+            height: 100vh; /* Make sure the body takes up the full height */
         }
+
+        /* Left side (default background and content) */
+        .left-side {
+            flex: 1; /* Takes up half of the screen width */
+            background-color: #f0f0f0; /* Light grey background */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Right side (light gray background) */
+        .right-side {
+            flex: 1; /* Takes up the other half of the screen width */
+            background-color: lightgray; /* Light gray background */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
         header {
             display: flex;
             align-items: center;
             padding: 20px;
+            background-color: #fff; /* White background for the header */
         }
+
         .icon {
             width: 40px; /* Adjust icon size */
             height: 40px; /* Adjust icon size */
             margin-right: 10px;
         }
+
         h1 {
             margin: 0;
             font-size: 24px;
         }
+
         nav {
             margin-top: 20px;
         }
+
         .button {
             background-color: #007bff; /* Button color */
             color: white;
@@ -39,6 +61,7 @@
             cursor: pointer;
             left: -5px;
         }
+
         .button:hover {
             background-color: #0056b3; /* Darker button color on hover */
         }
@@ -46,19 +69,27 @@
 </head>
 <body>
 
-<header>
-    <a href="index.html">
-        <img src="EXODE (5).png" alt="Site Icon" class="icon"> <!-- Replace with your icon URL -->
-    </a>
-    <h1>GD-Index</h1>
-</header>
+<!-- Left side of the screen content -->
+<div class="left-side">
+    <header>
+        <a href="index.html">
+            <img src="EXODE (5).png" alt="Site Icon" class="icon"> <!-- Replace with your icon URL -->
+        </a>
+        <h1>GD-Index</h1>
+    </header>
 
-<nav>
-    <a href="page1.html" class="button">Page 1</a>
-    <a href="page2.html" class="button">Page 2</a>
-    <a href="page3.html" class="button">Page 3</a>
-    <a href="contact.html" class="button">Contact</a>
-</nav>
+    <nav>
+        <a href="page1.html" class="button">Page 1</a>
+        <a href="page2.html" class="button">Page 2</a>
+        <a href="page3.html" class="button">Page 3</a>
+        <a href="contact.html" class="button">Contact</a>
+    </nav>
+</div>
+
+<!-- Right side of the screen (light gray section) -->
+<div class="right-side">
+    <!-- Right side content can go here -->
+</div>
 
 </body>
 </html>
